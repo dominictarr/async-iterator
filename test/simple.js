@@ -56,3 +56,22 @@ test('error when next() after end()', function (t) {
   })
 
 })
+
+test('queue end() until after next()', function (t) {
+
+  var ai = ArrayIterator(['one', 'two', 'three'])
+  var c = 0
+  ai.next(function (err) {
+    t.equal(c++, 0, 'next(cb) is called first')
+  })
+
+  ai.end(function () { 
+    t.equal(c++, 1, 'then end(cb)')
+  })
+
+  ai.end(function () { 
+    t.equal(c++, 2, 'all end(cb) are called eventually')
+    t.end()
+  })
+
+})
