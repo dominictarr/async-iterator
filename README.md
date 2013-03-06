@@ -1,0 +1,6 @@
+# async-iterator
+
+
+## License
+
+MIT
