@@ -1,7 +1,7 @@
 {
   "name": "async-iterator",
-  "description": "",
-  "version": "0.0.0",
+  "description": "A Standard API for LevelDOWN style Iterator.",
+  "version": "1.0.0",
   "homepage": "https://github.com/dominictarr/async-iterator",
   "repository": {
     "type": "git",
